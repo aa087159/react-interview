@@ -1,10 +1,7 @@
 import React from "react";
-// import { useHover } from "./components";
 import { Pagination } from "./components/pagination";
-// import { useClickOutside } from "./components";
 
 function App() {
-  // const [hoverRef, isHovered] = useHover();
   const [currPage, setCurrPage] = React.useState<number>(1);
   const handleCurrPageChange = React.useCallback((page: number) => {
     setCurrPage(page);
@@ -13,10 +10,6 @@ function App() {
   const handleSetRandomCurrPage = () => {
     setCurrPage(Math.floor(Math.random() * 50));
   };
-
-  // const ref = useClickOutside(() => {
-  //   console.log("clicked outside");
-  // });
 
   return (
     <div className="m-10">
@@ -32,8 +25,6 @@ function App() {
         Set to random page
       </button>
       <h1 className="text-lg mt-10">Current page: {currPage}</h1>
-      {/* <div ref={hoverRef}>{isHovered ? "hovered" : "not hovered"}</div> */}
-      {/* <div ref={ref}>Click me</div> */}
     </div>
   );
 }
